@@ -38,7 +38,6 @@ password-strength-checker/
 │
 ├── password_strength_checker.py
 ├── README.md
-└── requirements.txt (optional)
 ```
 
 ## 🚀 Installation
