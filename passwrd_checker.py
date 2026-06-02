@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import *
 from tkinter import ttk
 import math
 import re
@@ -7,8 +8,8 @@ class PasswordStrengthChecker:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("Password Strength Checker")
-        self.root.geometry("520x620")
-        self.root.resizable(False, False)
+        self.root.geometry("800x600")
+        self.root.resizable(True, True)
         
         # Variables
         self.password_var = tk.StringVar()
@@ -76,7 +77,13 @@ class PasswordStrengthChecker:
             ("digit", "Contains number (0-9)"),
             ("special", "Contains special character (!@#$...)")
         ]
-        
+
+        # self.scroll_bar = Scrollbar(self.root)
+        # self.scroll_bar.pack( side = RIGHT, fill = Y )
+
+        # self.entropy_label['yscrollcommand'] = self.scroll_bar.set
+        # self.scroll_bar.config( command = self.entropy_label.yview )
+
         for key, text in criteria_list:
             frame = tk.Frame(self.result_frame)
             frame.pack(anchor="w", padx=40, pady=4)
